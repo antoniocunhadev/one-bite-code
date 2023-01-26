@@ -4,9 +4,9 @@ let opcao = "";
 do {
   opcao = prompt(
     "Quantidade de imóveis cadastrados:\n" +
-      lista.length +
-      "\nEscolha uma opção:\n1. Cadastrar imóvel\n2.Consultar imóvel\n3. Sair"
-  );
+    lista.length +
+    );
+    "\nEscolha uma opção:\n1. Cadastrar imóvel\n2.Consultar imóvel\n3. Sair"
 
   switch (opcao) {
     case "1":
