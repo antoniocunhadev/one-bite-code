@@ -1,37 +1,32 @@
-function addJogador() {
-  let jogadoresList = document.getElementById("jogadores-list");
+function addPlayer() {
+  const position = document.getElementById("position").value
+  const name = document.getElementById("name").value
+  const number = document.getElementById("number").value
 
-  let h3 = document.createElement("h3");
-  h3.innerText = "Jogador";
+  const confirmation = confirm("Escalar " + name + " como " + position + "?");
 
-  let ul = document.createElement("ul");
+  if (confirmation) {
+    const teamList = document.getElementById("team-list")
+    const playerItem = document.createElement("li")
+    playerItem.id = "player-" + number;
+    playerItem.innerText = position + ": " + name + " (" + number + ")";
+    teamList.appendChild(playerItem);
 
-  let posicaoLi = document.createElement("li");
-  posicaoLi.innerText = "Posição: ";
-  let posicaoInput = document.createElement("input");
-  posicaoInput.type = "text";
-  posicaoInput.name = "fullname";
-  posicaoLi.appendChild(posicaoInput);
-  ul.appendChild(posicaoLi);
-  ul.appendChild(document.createElement("br"));
+    document.getElementById("position").value = ""
+    document.getElementById("name").value = ""
+    document.getElementById("number").value = ""
+  }
+}
+function removePlayer() {
+  const number = document.getElementById("numberToRemove").value
+  const playerToRemove = document.getElementById("player-" + number)
 
-  let nomeLi = document.createElement("li");
-  nomeLi.innerText = "Nome: ";
-  let nomeInput = document.createElement("input");
-  nomeInput.type = "text";
-  nomeInput.name = "fullname";
-  nomeLi.appendChild(nomeInput);
-  ul.appendChild(nomeLi);
-  ul.appendChild(document.createElement("br"));
+  const confirmation = confirm(
+    "Remover o jogador " + playerToRemove.innerText + "?"
+  )
 
-  let camisaLi = document.createElement("li");
-  camisaLi.innerText = "Numero da camisa: ";
-  let camisaInput = document.createElement("input");
-  camisaInput.type = "text";
-  camisaInput.name = "fullname";
-  camisaLi.appendChild(camisaInput);
-  ul.appendChild(camisaLi);
-  ul.appendChild(document.createElement("br"));
-
-  jogadoresList.append(h3, ul);
+  if (confirmation) {
+    document.getElementById("team-list").removeChild(playerToRemove)
+    document.getElementById("numberToRemove").value = ""
+  }
 }
