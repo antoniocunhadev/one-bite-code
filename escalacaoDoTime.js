@@ -30,3 +30,5 @@ function removePlayer() {
     document.getElementById("numberToRemove").value = ""
   }
 }
+
+
