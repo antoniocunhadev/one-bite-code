@@ -18,6 +18,6 @@ form.addEventListener("submit", function (addTecnologia) {
     tecnologiaList.appendChild(tecnologiaItem);
 
     document.getElementById("name").value = "";
-    document.getElementById("tecnologia").value = "";
+    // document.getElementById("tecnologia").value = "";
   }
 });
