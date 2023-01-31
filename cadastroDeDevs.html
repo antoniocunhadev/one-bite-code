@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Desenvolvedores</title>
+  </head>
+  <body>
+    <h1>Cadastro de Desenvolvedores</h1>
+    <form id="cadastroForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" placeholder="Ex:'Antonio'" />
+      <br />
+      <br />
+
+      <label for="tecnologia">Tecnologia:</label>
+      <input type="text" id="tecnologia" placeholder="Ex:'JavaScript'" />
+      <br />
+      <br />
+
+      <label for="experiencia">Tempo de experiência</label>
+      <input type="radio" name="experiencia" id="tempo1" /> 0-2 anos
+      <input type="radio" name="experiencia" id="tempo2" />3-4 anos
+      <input type="radio" name="experiencia" id="tempo3" />
+      5+ anos
+      <br />
+      <br />
+
+      <button onclick="addTecnologia()" id="submit">
+        Adicionar tecnologia</button>
+      <button onclick="removeTecnologia()" id="submit">
+        Remover tecnologia</button>
+    </form>
+    <h2>Experiência:</h2>
+    <ul id="tecnologia-list"></ul>
+    <script src="./cadastroDeDevs.js"></script>
+  </body>
+</html>
