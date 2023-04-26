@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box-card {
+  background-color: #D7E1E7 ;
+  display: flex;
+  margin: 40px;
+  padding: 30px;
+  border-radius: 15px;
+
+}
+
+.image {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.text-config {
+  padding: 5px;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+}
+
+.button-comprar {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.button-comprar:hover {
+  cursor: pointer;
+  border: 0;
+}
